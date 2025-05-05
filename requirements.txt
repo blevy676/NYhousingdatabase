@@ -2,3 +2,6 @@ streamlit
 pandas
 matplotlib
 pydeck
+seaborn
+folium
+numpy
