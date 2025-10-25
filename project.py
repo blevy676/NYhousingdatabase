@@ -48,7 +48,8 @@ st.markdown(
 # How can I filter the data to match my exact criteria
 # Which properties meet my criteria of min <BEDS>, max <PRICE> and min <PROPERTYSQFT>
 
-def read_data(file="C:\\Users\\Bella\\PythonProject\\FinalProject\\NY-House-Dataset.csv"):
+def read_data():
+  file = 'NY-House-Dataset.csv'
    df = pd.read_csv(file)
    df = df.dropna(subset=["PRICE", "LATITUDE", "LONGITUDE"])  #[DA1], #[DA7]
    df["PRICE"] = pd.to_numeric(df["PRICE"]) #[DA1], #[DA7], #[DA9]
@@ -280,4 +281,5 @@ horizontal_line()
 
 if st.button("Click for a suprise"):
    st.balloons()
+
 
