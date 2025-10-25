@@ -50,13 +50,13 @@ st.markdown(
 
 def read_data():
   file = 'NY-House-Dataset.csv'
-   df = pd.read_csv(file)
-   df = df.dropna(subset=["PRICE", "LATITUDE", "LONGITUDE"])  #[DA1], #[DA7]
-   df["PRICE"] = pd.to_numeric(df["PRICE"]) #[DA1], #[DA7], #[DA9]
-   return df
+  df = pd.read_csv(file)
+  df = df.dropna(subset=["PRICE", "LATITUDE", "LONGITUDE"])  #[DA1], #[DA7]
+  df["PRICE"] = pd.to_numeric(df["PRICE"]) #[DA1], #[DA7], #[DA9]
+  return df
 
 def get_price_bounds(df): #[PY2]
-   return int(df["PRICE"].min()), int(df["PRICE"].max()) #[PY2]
+  return int(df["PRICE"].min()), int(df["PRICE"].max()) #[PY2]
 
 st.sidebar.header("Filter Listings") #[ST4]
 
@@ -281,6 +281,7 @@ horizontal_line()
 
 if st.button("Click for a suprise"):
    st.balloons()
+
 
 
 
